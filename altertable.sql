@@ -5,7 +5,6 @@ alter table countries rename to country_new;
 
 2.
 alter table locations add region_id int;
-alter table locations add foreign key (region_id) references regions(region_id);
 
 3.
 alter table locations add ID int;
@@ -39,7 +38,7 @@ alter table job_history add foreign key (job_id) references jobs(job_id);
 12.
 
 13.
-alter table job_history drop constraint fk_job_id;
+
 
 14.
 create index indx_job_id on job_history(job_id);
