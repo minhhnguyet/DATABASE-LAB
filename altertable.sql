@@ -36,9 +36,10 @@ alter table locations drop constraint locations_pkey cascade;
 alter table job_history add foreign key (job_id) references jobs(job_id);
 
 12.
+alter table job_history add constraint fk_job_id foreign key (job_id) references jobs(job_id);
 
 13.
-
+alter table job_history drop constraint fk_job_id;
 
 14.
 create index indx_job_id on job_history(job_id);
